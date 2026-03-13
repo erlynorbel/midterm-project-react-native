@@ -1,50 +1,55 @@
-# Welcome to your Expo app 👋
+# Midterm Project - React Native Job Finder App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This project is a Job Finder App built with React Native + TypeScript using Expo Router.
 
-## Get started
+## Features
 
-1. Install dependencies
+- Job Finder screen
+  - Fetches jobs from `https://empllo.com/api/v1`
+  - Assigns unique IDs to fetched jobs using `react-native-uuid`
+  - Displays job details (title, company, location, salary)
+  - Includes search/filter by title, company, or location
+  - Supports saving jobs with no duplicates
+  - Supports applying directly from each job card
+- Saved Jobs screen
+  - Displays all saved jobs
+  - Allows applying to a saved job
+  - Allows removing a saved job
+- Application Form screen
+  - Fields: name, email, contact number, and "Why should we hire you?"
+  - Validations: required fields, proper email format, contact number format/length, min/max text lengths
+  - Shows submission feedback via alert
+  - Clears form after successful submission
+  - If opened from Saved Jobs, pressing "Okay" redirects to Job Finder screen
+- Theme toggle
+  - Light/Dark mode toggle button is available in both tab screens
+
+## Tech Stack
+
+- Expo SDK 54
+- React Native
+- TypeScript
+- Expo Router
+- React Navigation
+- react-native-uuid
+
+## Run the project
+
+1. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+2. Start development server:
 
    ```bash
-   npx expo start
+   npm run start
    ```
 
-In the output, you'll find options to open the app in a
+3. Run lint:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   npm run lint
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
-```
-
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
