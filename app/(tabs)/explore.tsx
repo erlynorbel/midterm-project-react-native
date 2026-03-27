@@ -13,7 +13,7 @@ export default function SavedJobsScreen() {
 
   const handleApply = (job: Job) => {
     setApplicationTarget({ job, source: 'saved' });
-    router.push('/apply');
+    router.navigate('/apply');
   };
 
   return (

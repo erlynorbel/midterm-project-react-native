@@ -102,7 +102,7 @@ export default function ApplyScreen() {
         text: 'Okay',
         onPress: () => {
           if (source === 'saved') {
-            router.replace('/(tabs)/index');
+            router.dismissAll();
             return;
           }
 

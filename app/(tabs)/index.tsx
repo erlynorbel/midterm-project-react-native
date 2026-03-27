@@ -121,7 +121,7 @@ export default function JobFinderScreen() {
 
   const handleApply = (job: Job) => {
     setApplicationTarget({ job, source: 'finder' });
-    router.push('/apply');
+    router.navigate('/apply');
   };
 
   return (
